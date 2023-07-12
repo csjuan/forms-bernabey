@@ -1,0 +1,53 @@
+<h1 class="text">formulario</h1>
+<div class="conteiner p-5">
+    <form [formGroup]="users" class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input formControlName="email"
+           type="email" 
+           class="form-control" [class.is-invalid]="emailC.touched && emailC.invalid"
+            id="inputEmail4">
+            <div class="invalid-feedback">
+                este campo requiere un minimo de 4 caracteres!
+             </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input formControlName="password"
+           type="password"
+            class="form-control" [class.is-invalid]="passwordC.touched && passwordC.invalid"
+             id="inputPassword4">
+             <div class="invalid-feedback">
+                este campo requiere minimo 7 caracteres!
+             </div>
+        </div>
+        <div class="col-12 p-4">
+          <label for="inputAddress" class="form-label">direccion</label>
+          <input formControlName="direccion"
+           type="text" 
+           class="form-control" [class.is-invalid]="direccionC.touched && direccionC.invalid"
+            id="inputAddress" placeholder="">
+        </div>
+        <div class="col-md-6 p-4">
+          <label for="inputCity" class="form-label">ciudad</label>
+          <input formControlName="ciudad"
+           type="text" 
+           class="form-control" [class.is-invalid]="ciudadC.touched && ciudadC.invalid"
+            id="inputCity">
+        </div>
+        <div class="col-md-6 p-4">
+            <label for="inputCity" class="form-label">pais</label>
+            <input formControlName="pais"
+             type="text"
+              class="form-control" [class.is-invalid]="paisC.touched && paisC.invalid"
+               id="inputCity">
+          </div>
+        <div class="col-md-4 p-4">
+          <div class="col-md-6 p-5 container px-4 text-center">
+            <button (click)="onSumbmit()" type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+        </div>
+      </form>
+     
+
+
